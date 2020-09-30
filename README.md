@@ -2,7 +2,7 @@
 
 Para o desafio:
 
-- [ ] Crie um fork dos projetos 
+- [x] Crie um fork dos projetos 
 - [ ] Enviar um pull request
 - [ ] Criar os projetos com a seguinte estrutura:
     - pasta com seu nome
