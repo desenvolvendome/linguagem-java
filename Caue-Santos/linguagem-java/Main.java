@@ -5,5 +5,8 @@ public class Main {
 
     Fatorial fatorial = new Fatorial();
     fatorial.calcula();
+
+    LinearSearch linearSearch = new LinearSearch();
+    linearSearch.calcula();
   }
 }
