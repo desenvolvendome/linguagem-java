@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import algorithms.factorial.Factorial;
+import algorithms.*;
 
 public class Main {
 
@@ -10,7 +10,7 @@ public class Main {
 
         int option = -1;
 
-        while (option < 0 || option > 1){
+        while (option < 0 || option > 2){
 
             System.out.println("1) - Factorial");
             System.out.println("2) - Linear Search");
@@ -20,11 +20,12 @@ public class Main {
             System.out.print(">>> ");
             option = input.nextInt();
 
-            if(option < 0 || option > 1)
+            if(option < 0 || option > 2)
                 System.out.println("Opss, opção invalida!");
-            else if(option == 1){
+            else if(option == 1)
                 factorial();
-            }
+            else if(option == 2)
+                search();
 
         }
     }
@@ -36,5 +37,22 @@ public class Main {
         int number = input.nextInt();
 
         System.out.printf("O fatorial de %d é: %d\n", number, Factorial.factorial(number));
+    }
+
+    protected static void search(){
+        Scanner input = new Scanner(System.in);
+
+        int list[] = { 2, 3, 4, 9, 10, 20, 49, 70, 1000, 120, 6, 24, 666, 67 };
+        System.out.println("Esses são os intens na lista: \n{ 2, 3, 4, 9, 10, 20, 49, 70, 1000, 120, 6, 24, 666, 67 }\n");
+
+        System.out.print("Digite o numero que deseja buscar: ");
+        int wanted = input.nextInt();
+
+        int result = LinearSearch.search(list, wanted);
+
+        if (result == -1)
+            System.out.println("Opa, esse não tá na lista! =(");
+        else
+            System.out.printf("Ele está na posição: %d\n", result);
     }
 }
