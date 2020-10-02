@@ -1,2 +1,2 @@
-cd "Caue-Santos/linguagem-java"
-java Main
+cd "mauricio-alves/linguagem-java/bubblesort"
+javac Main.java
