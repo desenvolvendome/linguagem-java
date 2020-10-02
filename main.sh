@@ -1,2 +1,2 @@
-cd "Caue-Santos/linguagem-java"
+cd "mauricio-alves/linguagem-java/linearsearch"
 java Main
