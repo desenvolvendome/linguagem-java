@@ -7,10 +7,9 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Seja bem vindo! \nEscolha o numero do algoritmo que deseja esperimentar: \n");
-
         int option = -1;
 
-        while (option < 0 || option > 2){
+        while (option < 0 || option > 3){
 
             System.out.println("1) - Factorial");
             System.out.println("2) - Linear Search");
@@ -20,13 +19,14 @@ public class Main {
             System.out.print(">>> ");
             option = input.nextInt();
 
-            if(option < 0 || option > 2)
+            if(option < 0 || option > 3)
                 System.out.println("Opss, opção invalida!");
             else if(option == 1)
                 factorial();
             else if(option == 2)
                 search();
-
+            else
+                bubbleSort();
         }
     }
 
@@ -42,7 +42,7 @@ public class Main {
     protected static void search(){
         Scanner input = new Scanner(System.in);
 
-        int list[] = { 2, 3, 4, 9, 10, 20, 49, 70, 1000, 120, 6, 24, 666, 67 };
+        int[] list = { 2, 3, 4, 9, 10, 20, 49, 70, 1000, 120, 6, 24, 666, 67 };
         System.out.println("Esses são os intens na lista: \n{ 2, 3, 4, 9, 10, 20, 49, 70, 1000, 120, 6, 24, 666, 67 }\n");
 
         System.out.print("Digite o numero que deseja buscar: ");
@@ -54,5 +54,15 @@ public class Main {
             System.out.println("Opa, esse não tá na lista! =(");
         else
             System.out.printf("Ele está na posição: %d\n", result);
+    }
+
+    protected static void bubbleSort(){
+
+        int arr[] = {2,7,4, 1, 45, 67, 100, 5};
+        int n = arr.length;
+        BubbleSort.bubbleSort(arr, n);
+        System.out.println("Numero ordenados: ");
+
+        BubbleSort.printArray(arr, n);
     }
 }
